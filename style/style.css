@@ -1,0 +1,60 @@
+@import url("./dashboard.css");
+@import url("./modal.css");
+
+:root {
+  --textblack: #222222;
+  --textgreen: #01a19a;
+  --textgray: #6c6c6c;
+  --borderline: #e6eaee;
+  --text-gray-2: #939eab;
+  --network-name-blue: #3081f8;
+  font-family: "Proxima Nova";
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  src: url("../assets/font/Proxima\ Nova\ Regular.ttf");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  src: url("../assets/font/Proxima\ Nova\ Semibold.ttf");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  src: url("../assets/font/Proxima\ Nova\ Bold.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* > p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: max-content;
+  height: max-content;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}

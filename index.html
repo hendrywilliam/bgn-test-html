@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <title>Dashboard — Biznet Gio</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="instance-control">
+          <div class="instance-control-upper">
+            <div>
+              <h2>Nama Instance</h2>
+              <ul>
+                <li>SS2.1</li>
+                <li>2 GB RAM</li>
+                <li>1 vCPU</li>
+                <li>60 GB Disk</li>
+                <li>Ubuntu 18.04 LTS</li>
+              </ul>
+            </div>
+            <div>
+              <button>DELETE</button>
+            </div>
+          </div>
+          <div class="instance-control-lower">
+            <div>
+              <p>Power State:</p>
+              <p>Running</p>
+            </div>
+            <div>
+              <button>
+                <img src="/assets/images/icon-start.svg" alt="" />
+                Start
+              </button>
+              <button>
+                <img src="/assets/images/icon-pause.svg" alt="" />
+                Pause
+              </button>
+              <button>
+                <img src="/assets/images/icon-restart.svg" alt="" />
+                Restart
+              </button>
+              <button>
+                <img src="/assets/images/icon-turnoff.svg" alt="" />
+                Power Off
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-container">
+          <div>
+            <ul class="tab-menu">
+              <li class="tab-menu-overview">Overview</li>
+              <li class="tab-menu-access">Access</li>
+              <li class="tab-menu-networks">Networks</li>
+              <li class="tab-menu-security-group">Security Groups</li>
+              <li class="tab-menu-volumes">Volumes</li>
+              <li class="tab-menu-snapshots">Snapshots</li>
+              <li class="tab-menu-operations">Operations</li>
+            </ul>
+            <div class="tab-content">
+              <div>
+                <div class="tab-content-attach-network">
+                  <h2>Networks</h2>
+                  <p>Attach Network</p>
+                  <div>
+                    <select>
+                      <option value="network2">Network2</option>
+                    </select>
+                    <button class="tab-content-attach-network-button">
+                      ATTACH
+                    </button>
+                  </div>
+                </div>
+                <p>Instance Networks</p>
+                <div class="tab-content-instance-network">
+                  <table class="tab-content-instance-network-table">
+                    <tr>
+                      <th>Network Name</th>
+                      <th>Subnet</th>
+                      <th>External Connection</th>
+                      <th>Private IP</th>
+                      <th>Public IP</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>public_network</td>
+                      <td>192.168.0.0/20</td>
+                      <td>Public</td>
+                      <td>192.168.0.13</td>
+                      <td>192.168.0.13</td>
+                      <td class="tab-content-instance-network-table-action">
+                        <img
+                          id="action-button-1"
+                          src="./assets/images/action.svg"
+                          alt=""
+                          onclick="showPopup()"
+                        />
+                        <div
+                          class="hidden tab-content-instance-network-table-action-popup"
+                          id="pop-up-1"
+                        >
+                          <button id="open-modal-button">
+                            <img
+                              src="./assets/images/detach-icon.svg"
+                              alt="Detach"
+                            />
+                            Detach Network
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/remove-icon.svg"
+                              alt="Remove"
+                            />
+                            Remove Public IP
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>network1</td>
+                      <td>10.10.0.0/20</td>
+                      <td>Public</td>
+                      <td>10.10.0.14</td>
+                      <td></td>
+                      <td class="tab-content-instance-network-table-action">
+                        <img
+                          id="action-button-2"
+                          src="./assets/images/action.svg"
+                          alt=""
+                          onclick="showPopup2()"
+                        />
+                        <div
+                          class="hidden tab-content-instance-network-table-action-popup"
+                          id="pop-up-2"
+                        >
+                          <button id="open-modal-button2">
+                            <img
+                              src="./assets/images/detach-icon.svg"
+                              alt="Detach"
+                            />
+                            Detach Network
+                          </button>
+                          <button>
+                            <img
+                              src="./assets/images/remove-icon.svg"
+                              alt="Remove"
+                            />
+                            Remove Public IP
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="modal-container" class="hidden modal">
+      <div>
+        <div class="modal-content">
+          <div class="close">
+            <span>&times;</span>
+          </div>
+          <div>
+            <p class="modal-title">Detach Network</p>
+            <p>
+              Detaching network interface with Public IP will detach network
+              interface and permanently remove the associated Public IP. You
+              will get no refund for your previous payment of Public IP.
+            </p>
+            <div>
+              <button>CANCEL</button>
+              <button class="detach-button">DETACH</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

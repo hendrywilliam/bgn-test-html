@@ -1,0 +1,89 @@
+.modal {
+  position: fixed;
+  justify-content: center; /* untuk menengahkan secara horizontal */
+  align-items: center;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal div {
+  width: 500px;
+  height: max-content;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  height: 300px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  border-radius: 0.375rem;
+}
+
+.modal-content div:last-child .modal-title {
+  font-weight: bold;
+  font-size: large;
+}
+
+.modal-content div:first-child {
+  width: 100%;
+}
+
+.modal-content div:last-child {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.modal-content div:last-child p {
+  margin-bottom: 20px;
+}
+
+.modal-content div:last-child div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
+
+.modal-content div:last-child div button {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.modal-content div:last-child div button:first-child {
+  color: black;
+  background-color: var(--borderline);
+  outline: none;
+  border: none;
+  border-radius: 0.375rem;
+}
+
+.modal-content div:last-child div button:last-child {
+  color: white;
+  background-color: var(--textgreen);
+  outline: none;
+  border: none;
+  border-radius: 0.375rem;
+}
+
+.close {
+  display: flex;
+  justify-content: end;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

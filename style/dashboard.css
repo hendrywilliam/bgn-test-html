@@ -1,0 +1,288 @@
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: "Proxima Nova";
+}
+
+.main-container {
+  width: 80%;
+  height: max-content;
+  align-self: center;
+}
+
+.instance-control {
+  height: max-content;
+  width: 100%;
+}
+
+.instance-control > p {
+  padding: 0;
+  margin: 0;
+}
+
+.instance-control-upper {
+  border-bottom: 1px solid var(--borderline);
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.instance-control-upper div:first-child {
+  flex-basis: 85%;
+}
+
+.instance-control-upper > div:first-child > h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.instance-control-upper > div:first-child > ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  color: var(--textgray);
+}
+
+.instance-control-upper div:first-child ul li:first-child {
+  padding-right: 20px;
+}
+
+.instance-control-upper div:first-child ul li:nth-child(n + 2) {
+  padding-right: 20px;
+  padding-left: 20px;
+  border-left: 1px solid var(--borderline);
+}
+
+.instance-control-upper div:last-child {
+  flex-basis: 15%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.instance-control-upper div:last-child button {
+  width: 70%;
+  height: 60%;
+  font-size: 15px;
+  font-weight: bold;
+  outline: 1px solid #dd1f1f;
+  background-color: transparent;
+  border: none;
+  color: #dd1f1f;
+  border-radius: 0.375rem;
+}
+
+.instance-control-upper div:last-child button:active {
+  background-color: #dd1f1f;
+  color: white;
+}
+
+.instance-control-lower {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--borderline);
+  display: flex;
+  justify-content: space-between;
+}
+
+.instance-control-lower div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.instance-control-lower div:first-child p:last-child {
+  font-weight: bold;
+  color: var(--textgreen);
+}
+
+.instance-control-lower div:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+.instance-control-lower div:last-child button {
+  height: 30px;
+  width: 130px;
+  color: var(--textgray);
+  border-radius: 0.375rem;
+  font-size: 15px;
+}
+
+.instance-control-lower div:last-child button img {
+  width: 20px;
+  height: 15px;
+  align-self: center;
+}
+
+.instance-control-lower div:last-child button:first-child {
+  background-color: #f3f5fa;
+  outline: 1px solid #f3f5fa;
+  border: none;
+}
+
+.instance-control-lower div:last-child button:nth-child(n + 2) {
+  background-color: transparent;
+  outline: 1px solid var(--textgreen);
+  border: none;
+}
+
+.tab-container {
+  width: 100%;
+  margin-top: 30px;
+  border: 1px solid var(--borderline);
+  border-radius: 0.375rem;
+}
+
+.tab-menu {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  list-style-type: none;
+  margin: 0;
+  border-bottom: 2px solid var(--borderline);
+  padding: 30px 60px 0 60px;
+}
+
+.tab-menu li {
+  padding: 5px;
+}
+
+.tab-menu .tab-menu-networks {
+  border-bottom: 4px solid var(--textgreen);
+}
+
+.tab-content {
+  padding: 30px 60px 30px 60px;
+  font-size: medium;
+}
+
+.tab-content div p {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.tab-content-attach-network div {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tab-content-attach-network div select {
+  width: 85%;
+  padding: 10px;
+  border-color: var(--borderline);
+  font-size: medium;
+}
+
+.tab-content-attach-network-button {
+  width: 15%;
+  background-color: var(--textgreen);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: bold;
+}
+
+.tab-content-instance-network {
+  margin-bottom: 50px;
+  width: 100%;
+  height: max-content;
+  overflow-x: auto;
+}
+
+.tab-content-instance-network-table {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
+  border-collapse: collapse;
+  position: relative;
+  table-layout: auto;
+}
+
+.tab-content-instance-network-table th,
+td {
+  border-bottom: 1px solid var(--borderline);
+  padding: 20px 20px;
+}
+
+.tab-content-instance-network-table th {
+  font-weight: normal;
+  color: var(--text-gray-2);
+}
+
+.tab-content-instance-network-table td:first-child {
+  color: var(--network-name-blue);
+}
+
+.tab-content-instance-network-table tr:first-child {
+  text-align: left;
+}
+
+.tab-content-instance-network-table-action {
+  position: relative;
+}
+
+.tab-content-instance-network-table-action-popup {
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  height: max-content;
+  padding: 10px;
+  left: -150%;
+  width: max-content;
+  border-radius: 0.375rem;
+  border: 1px solid var(--borderline);
+  z-index: 10;
+  gap: 10px;
+}
+
+.tab-content-instance-network-table-action-popup > button {
+  width: 100%;
+  font-size: medium;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#action-button-1 {
+  cursor: pointer;
+}
+#action-button-2 {
+  cursor: pointer;
+}
+
+.tab-content-instance-network-table-action-popup > button:first-child {
+  border-bottom: 1px solid var(--borderline);
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1091px) {
+  .tab-menu {
+    gap: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .instance-control-lower div:last-child button {
+    height: 30px;
+    width: max-content;
+    color: var(--textgray);
+    border-radius: 0.375rem;
+  }
+}
