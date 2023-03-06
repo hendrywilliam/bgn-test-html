@@ -48,6 +48,7 @@
   margin-bottom: 62px;
   font-size: 14px;
   line-height: 22.5px;
+  color: var(--modal-text);
 }
 
 .modal-content div:last-child div {
@@ -66,7 +67,7 @@
 }
 
 .modal-content div:last-child div button:first-child {
-  color: black;
+  color: #939eab;
   background-image: linear-gradient(#f0f4f9, #d3dde8);
   outline: none;
   border: none;
