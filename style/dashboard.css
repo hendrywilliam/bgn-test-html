@@ -269,7 +269,6 @@ main {
   margin-bottom: 50px;
   width: 100%;
   height: max-content;
-  overflow-x: auto;
 }
 
 .tab-content-instance-network-table {
