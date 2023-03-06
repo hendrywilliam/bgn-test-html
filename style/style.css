@@ -8,6 +8,8 @@
   --borderline: #e6eaee;
   --text-gray-2: #939eab;
   --network-name-blue: #3081f8;
+  --tab-menu-active: #354052;
+  --tab-menu-not-active: #6c6c6c;
   font-family: "Proxima Nova";
 }
 

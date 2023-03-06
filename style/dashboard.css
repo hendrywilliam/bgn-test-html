@@ -13,8 +13,9 @@ main {
 }
 
 .main-container {
-  width: 80%;
-  height: max-content;
+  width: 1010px;
+  height: 800px;
+  margin: 50px;
   align-self: center;
 }
 
@@ -45,11 +46,13 @@ main {
 
 .instance-control-upper > div:first-child > ul {
   display: flex;
+  font-size: 13px;
   list-style-type: none;
+  font-weight: 400;
   padding: 0;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 100%;
+  width: max-content;
   color: var(--textgray);
 }
 
@@ -71,10 +74,10 @@ main {
 }
 
 .instance-control-upper div:last-child button {
-  width: 70%;
-  height: 60%;
-  font-size: 15px;
-  font-weight: bold;
+  width: 120px;
+  height: 30px;
+  font-size: 11px;
+  font-weight: 600;
   outline: 1px solid #dd1f1f;
   background-color: transparent;
   border: none;
@@ -88,8 +91,8 @@ main {
 }
 
 .instance-control-lower {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 17px;
+  padding-bottom: 18px;
   border-bottom: 1px solid var(--borderline);
   display: flex;
   justify-content: space-between;
@@ -99,12 +102,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
+}
+
+.instance-control-lower div:first-child p:first-child {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .instance-control-lower div:first-child p:last-child {
-  font-weight: bold;
+  font-weight: 600;
   color: var(--textgreen);
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .instance-control-lower div:last-child {
@@ -113,17 +124,22 @@ main {
 }
 
 .instance-control-lower div:last-child button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  gap: 5px;
+  line-height: 13.4px;
   height: 30px;
-  width: 130px;
+  width: 80px;
   color: var(--textgray);
   border-radius: 0.375rem;
-  font-size: 15px;
+  cursor: pointer;
 }
 
 .instance-control-lower div:last-child button img {
-  width: 20px;
-  height: 15px;
-  align-self: center;
+  width: 8.43px;
+  height: 8.86px;
 }
 
 .instance-control-lower div:last-child button:first-child {
@@ -148,53 +164,84 @@ main {
 .tab-menu {
   display: flex;
   width: 100%;
-  gap: 40px;
+  gap: 25px;
   list-style-type: none;
   margin: 0;
-  border-bottom: 2px solid var(--borderline);
-  padding: 30px 60px 0 60px;
+  padding: 30px 40px 0 40px;
+  border-bottom: 1px solid var(--borderline);
 }
 
 .tab-menu li {
-  padding: 5px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  line-height: 19.49px;
+  font-weight: 400;
+  color: var(--tab-menu-not-active);
+  cursor: pointer;
 }
 
 .tab-menu .tab-menu-networks {
   border-bottom: 4px solid var(--textgreen);
+  color: var(--tab-menu-active);
+  font-weight: 600;
 }
 
 .tab-content {
-  padding: 30px 60px 30px 60px;
+  padding: 30px 40px 30px 40px;
   font-size: medium;
 }
 
-.tab-content div p {
-  padding-top: 30px;
-  padding-bottom: 10px;
+.tab-content .tab-content-attach-network-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
 }
 
-.tab-content-attach-network div {
+.tab-content div p {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.tab-content-attach-network .tab-content-attach-network-selection {
   display: flex;
   gap: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.tab-content-attach-network div select {
+.tab-content-attach-network .tab-content-attach-network-selection select {
   width: 85%;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10.5px;
+  appearance: none;
+  background-image: url("../assets/images/arrow-down.svg");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: right 16.5px center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border-color: var(--borderline);
-  font-size: medium;
+  font-size: 14px;
 }
 
 .tab-content-attach-network-button {
-  width: 15%;
-  background-color: var(--textgreen);
+  width: 150px;
+  height: 40px;
+  background-image: linear-gradient(#01a19a, #008a84);
   color: white;
   outline: none;
   border: none;
   border-radius: 0.375rem;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13.4px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .tab-content-instance-network {
@@ -211,22 +258,69 @@ main {
   margin-top: 20px;
   border-collapse: collapse;
   position: relative;
-  table-layout: auto;
-}
-
-.tab-content-instance-network-table th,
-td {
-  border-bottom: 1px solid var(--borderline);
-  padding: 20px 20px;
+  table-layout: fixed;
 }
 
 .tab-content-instance-network-table th {
-  font-weight: normal;
+  width: 50%;
+  padding-top: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--borderline);
+}
+
+.tab-content-instance-network-table th:first-child {
+  padding-left: 20px;
+}
+
+.tab-content-instance-network-table th:last-child {
+  padding-right: 20px;
+  width: 10%;
+}
+
+.tab-content-instance-network-table th {
+  font-weight: 400;
+  font-size: 14px;
   color: var(--text-gray-2);
 }
 
-.tab-content-instance-network-table td:first-child {
+.tab-content-instance-network-table .tab-content-table-row1 td:first-child {
   color: var(--network-name-blue);
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.tab-content-instance-network-table .tab-content-table-row1 td {
+  padding-top: 21px;
+  padding-bottom: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  font-size: 14px;
+}
+
+.tab-content-table-row1 {
+  border-bottom: 1px solid var(--borderline);
+}
+
+.tab-content-table-row2 td {
+  padding-top: 21px;
+  padding-bottom: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  font-size: 14px;
+}
+
+.tab-content-table-row2 td:first-child {
+  color: var(--network-name-blue);
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.tab-content-table-row2 {
+  border-bottom: 1px solid var(--borderline);
+}
+
+.tab-content-instance-network-table .tab-content-table-row1 td:last-child {
+  padding-right: 20px;
 }
 
 .tab-content-instance-network-table tr:first-child {
@@ -243,8 +337,8 @@ td {
   position: absolute;
   height: max-content;
   padding: 10px;
-  left: -150%;
-  width: max-content;
+  left: -420%;
+  width: 170px;
   border-radius: 0.375rem;
   border: 1px solid var(--borderline);
   z-index: 10;
@@ -258,6 +352,11 @@ td {
   border: none;
   outline: none;
   cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 #action-button-1 {
@@ -274,9 +373,9 @@ td {
 
 @media screen and (max-width: 1091px) {
   .tab-menu {
-    gap: 0;
+    gap: 5;
     width: 100%;
-    padding: 0;
+    padding-top: 30px;
   }
 
   .instance-control-lower div:last-child button {
